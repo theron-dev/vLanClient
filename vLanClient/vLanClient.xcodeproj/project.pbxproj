@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11819C10177181D300F4FC57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11819C0E177181D300F4FC57 /* InfoPlist.strings */; };
+		11819C701771880600F4FC57 /* vLanClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 11819C151771822800F4FC57 /* vLanClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11819C741771890300F4FC57 /* vLanClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 11819C161771822800F4FC57 /* vLanClient.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		11819BF61771816000F4FC57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		11819C08177181D300F4FC57 /* vLanClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vLanClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11819C09177181D300F4FC57 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		11819C0D177181D300F4FC57 /* vLanClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "vLanClient-Info.plist"; sourceTree = "<group>"; };
+		11819C0F177181D300F4FC57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		11819C11177181D400F4FC57 /* vLanClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vLanClient-Prefix.pch"; sourceTree = "<group>"; };
+		11819C151771822800F4FC57 /* vLanClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vLanClient.h; sourceTree = "<group>"; };
+		11819C161771822800F4FC57 /* vLanClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vLanClient.m; sourceTree = "<group>"; };
+		11819C19177182A800F4FC57 /* libsmbclient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsmbclient.a; sourceTree = "<group>"; };
+		11819C1A177182A800F4FC57 /* libsmbclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libsmbclient.h; sourceTree = "<group>"; };
+		11819C1B177182A800F4FC57 /* libtalloc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtalloc.a; sourceTree = "<group>"; };
+		11819C1C177182A800F4FC57 /* libtdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtdb.a; sourceTree = "<group>"; };
+		11819C1D177182A800F4FC57 /* libwbclient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwbclient.a; sourceTree = "<group>"; };
+		11819C1E177182A800F4FC57 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11819C05177181D300F4FC57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11819BEA1771815F00F4FC57 = {
+			isa = PBXGroup;
+			children = (
+				11819C18177182A700F4FC57 /* libs */,
+				11819C0B177181D300F4FC57 /* vLanClient */,
+				11819BF51771816000F4FC57 /* Frameworks */,
+				11819BF41771816000F4FC57 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11819BF41771816000F4FC57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11819C08177181D300F4FC57 /* vLanClient.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11819BF51771816000F4FC57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11819BF61771816000F4FC57 /* Foundation.framework */,
+				11819C09177181D300F4FC57 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11819C0B177181D300F4FC57 /* vLanClient */ = {
+			isa = PBXGroup;
+			children = (
+				11819C0C177181D300F4FC57 /* Supporting Files */,
+				11819C151771822800F4FC57 /* vLanClient.h */,
+				11819C161771822800F4FC57 /* vLanClient.m */,
+			);
+			path = vLanClient;
+			sourceTree = "<group>";
+		};
+		11819C0C177181D300F4FC57 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				11819C0D177181D300F4FC57 /* vLanClient-Info.plist */,
+				11819C0E177181D300F4FC57 /* InfoPlist.strings */,
+				11819C11177181D400F4FC57 /* vLanClient-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11819C18177182A700F4FC57 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				11819C19177182A800F4FC57 /* libsmbclient.a */,
+				11819C1A177182A800F4FC57 /* libsmbclient.h */,
+				11819C1B177182A800F4FC57 /* libtalloc.a */,
+				11819C1C177182A800F4FC57 /* libtdb.a */,
+				11819C1D177182A800F4FC57 /* libwbclient.a */,
+				11819C1E177182A800F4FC57 /* Rakefile */,
+			);
+			name = libs;
+			path = ../libs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		11819C6F1771880000F4FC57 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11819C701771880600F4FC57 /* vLanClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		11819C07177181D300F4FC57 /* vLanClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11819C12177181D400F4FC57 /* Build configuration list for PBXNativeTarget "vLanClient" */;
+			buildPhases = (
+				11819C04177181D300F4FC57 /* Sources */,
+				11819C05177181D300F4FC57 /* Frameworks */,
+				11819C06177181D300F4FC57 /* Resources */,
+				11819C6F1771880000F4FC57 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vLanClient;
+			productName = vLanClient;
+			productReference = 11819C08177181D300F4FC57 /* vLanClient.framework */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11819BEB1771815F00F4FC57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = hailong.org;
+			};
+			buildConfigurationList = 11819BEE1771815F00F4FC57 /* Build configuration list for PBXProject "vLanClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 11819BEA1771815F00F4FC57;
+			productRefGroup = 11819BF41771816000F4FC57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11819C07177181D300F4FC57 /* vLanClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11819C06177181D300F4FC57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11819C10177181D300F4FC57 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11819C04177181D300F4FC57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11819C741771890300F4FC57 /* vLanClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		11819C0E177181D300F4FC57 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11819C0F177181D300F4FC57 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11819BFF1771816100F4FC57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		11819C001771816200F4FC57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		11819C13177181D400F4FC57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "vLanClient/vLanClient-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "vLanClient/vLanClient-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../libs\"",
+				);
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-Objc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		11819C14177181D400F4FC57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "vLanClient/vLanClient-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "vLanClient/vLanClient-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../libs\"",
+				);
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-Objc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11819BEE1771815F00F4FC57 /* Build configuration list for PBXProject "vLanClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11819BFF1771816100F4FC57 /* Debug */,
+				11819C001771816200F4FC57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11819C12177181D400F4FC57 /* Build configuration list for PBXNativeTarget "vLanClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11819C13177181D400F4FC57 /* Debug */,
+				11819C14177181D400F4FC57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 11819BEB1771815F00F4FC57 /* Project object */;
+}
