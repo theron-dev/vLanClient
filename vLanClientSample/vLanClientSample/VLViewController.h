@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VLViewController : UIViewController
+@interface VLViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *titleItem;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+- (IBAction)refreshAction:(id)sender;
 
 @end

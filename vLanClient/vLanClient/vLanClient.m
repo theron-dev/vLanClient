@@ -9,7 +9,9 @@
 #import "vLanClient.h"
 
 #include "libsmbclient.h"
-#include <sys/socket.h>  
+#include <sys/socket.h> 
+#include <netdb.h>
+#include <arpa/inet.h>
 
 static vLanClient * defaultClient = nil;
 
@@ -57,54 +59,7 @@ static vLanClient * defaultClient = nil;
         }
         
         smbc_set_context(_SMB.ctx);
-        
-        errno = 0;
-        int dh = smbc_opendir("smb://");
-        
-        if(dh >0){
-            
-            struct smbc_dirent* dirent;
-            
-            while((dirent = smbc_readdir(dh))){
-                
-                printf("\ntype:%d %s\n",dirent->smbc_type, dirent->name);
-                
-                switch (dirent->smbc_type) {
-                    case SMBC_WORKGROUP:
-                    {
-                        char url[1024];
-                        
-                        snprintf(url, sizeof(url),"smb://%s",dirent->name);
-                        
-                        int dh = smbc_opendir(url);
-                        struct smbc_dirent* dirent;
-                        if(dh>0){
-                            while((dirent = smbc_readdir(dh))){
-                                printf("\n\ttype:%d %s\n",dirent->smbc_type, dirent->name);
-                            }
-                            smbc_closedir(dh);
-                        }
-                        else{
-                            printf("\nerrno:%d\n",errno);
-                        }
-                    }
-                        break;
-                        
-                    default:
-                        break;
-                }
-                
-            }
-            
-            
-            smbc_closedir(dh);
-            
-            
-            
-        }
-
-        printf("\nerrno:%d\n",errno);
-        
+       
     }
     return self;
 }
@@ -119,5 +74,67 @@ static vLanClient * defaultClient = nil;
     [super dealloc];
 }
 
+-(NSArray *) hostList{
+    
+    NSMutableArray * rs = [NSMutableArray arrayWithCapacity:4];
+
+    errno = 0;
+    int dh = smbc_opendir("smb://");
+    
+    if(dh >0){
+        
+        struct smbc_dirent* dirent;
+        
+        while((dirent = smbc_readdir(dh))){
+            
+            printf("\ntype:%d %s\n",dirent->smbc_type, dirent->name);
+            
+            switch (dirent->smbc_type) {
+                case SMBC_WORKGROUP:
+                {
+                    char url[1024];
+                    
+                    snprintf(url, sizeof(url),"smb://%s",dirent->name);
+                    
+                    int dh = smbc_opendir(url);
+                    struct smbc_dirent* dirent;
+                    if(dh>0){
+                        while((dirent = smbc_readdir(dh))){
+                            
+                            printf("\n\ttype:%d %s\n",dirent->smbc_type, dirent->name);
+                            switch (dirent->smbc_type) {
+                                case SMBC_SERVER:
+                                {
+                                    [rs addObject:[NSString stringWithCString:dirent->name encoding:NSUTF8StringEncoding]];
+                                }
+                                    break;
+                                default:
+                                    break;
+                            }
+                            
+                            
+                        }
+                        smbc_closedir(dh);
+                    }
+                    else{
+                        printf("\nerrno:%d\n",errno);
+                    }
+                }
+                    break;
+                    
+                default:
+                    break;
+            }
+            
+        }
+        
+        smbc_closedir(dh);
+
+    }
+    
+    printf("\nerrno:%d\n",errno);
+    
+    return rs;
+}
 
 @end

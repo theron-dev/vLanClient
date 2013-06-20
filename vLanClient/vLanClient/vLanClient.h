@@ -12,4 +12,6 @@
 
 +(id) defaultClient;
 
+-(NSArray *) hostList;
+
 @end

@@ -20,10 +20,6 @@
 		11819C501771876D00F4FC57 /* VLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11819C4E1771876D00F4FC57 /* VLViewController.xib */; };
 		11819C5D1771879700F4FC57 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 11819C5C1771879700F4FC57 /* libiconv.dylib */; };
 		11819C5F1771879C00F4FC57 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 11819C5E1771879C00F4FC57 /* libresolv.dylib */; };
-		11819C64177187B700F4FC57 /* libsmbclient.a in Resources */ = {isa = PBXBuildFile; fileRef = 11819C60177187B700F4FC57 /* libsmbclient.a */; };
-		11819C65177187B700F4FC57 /* libtalloc.a in Resources */ = {isa = PBXBuildFile; fileRef = 11819C61177187B700F4FC57 /* libtalloc.a */; };
-		11819C66177187B700F4FC57 /* libtdb.a in Resources */ = {isa = PBXBuildFile; fileRef = 11819C62177187B700F4FC57 /* libtdb.a */; };
-		11819C67177187B700F4FC57 /* libwbclient.a in Resources */ = {isa = PBXBuildFile; fileRef = 11819C63177187B700F4FC57 /* libwbclient.a */; };
 		11819C73177188C400F4FC57 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 11819C72177188C400F4FC57 /* libz.dylib */; };
 		11819C751771897500F4FC57 /* libsmbclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11819C60177187B700F4FC57 /* libsmbclient.a */; };
 		11819C761771897500F4FC57 /* libtalloc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11819C61177187B700F4FC57 /* libtalloc.a */; };
@@ -240,10 +236,6 @@
 				11819C481771876B00F4FC57 /* Default@2x.png in Resources */,
 				11819C4A1771876C00F4FC57 /* Default-568h@2x.png in Resources */,
 				11819C501771876D00F4FC57 /* VLViewController.xib in Resources */,
-				11819C64177187B700F4FC57 /* libsmbclient.a in Resources */,
-				11819C65177187B700F4FC57 /* libtalloc.a in Resources */,
-				11819C66177187B700F4FC57 /* libtdb.a in Resources */,
-				11819C67177187B700F4FC57 /* libwbclient.a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
